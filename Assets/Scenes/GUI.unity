@@ -1794,7 +1794,7 @@ GameObject:
   - component: {fileID: 1475730174}
   - component: {fileID: 1475730173}
   m_Layer: 5
-  m_Name: name
+  m_Name: Username
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1816,7 +1816,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 144, y: -232}
+  m_AnchoredPosition: {x: 144, y: 128}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1475730173
@@ -1873,7 +1873,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -2158,30 +2158,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1849017229}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 229606464}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 1776497816}
         m_TargetAssemblyTypeName: SupabaseManager, Assembly-CSharp
         m_MethodName: ValidateLogin
@@ -2246,8 +2222,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UsernameField: {fileID: 927127334}
   PasswordField: {fileID: 998384247}
-  usernameText: {fileID: 1475730173}
+  usernameText: {fileID: 462342612}
   messageText: {fileID: 295117771}
+  loginCanvas: {fileID: 1849017232}
+  menuCanvas: {fileID: 229606468}
 --- !u!1 &1821427347
 GameObject:
   m_ObjectHideFlags: 0

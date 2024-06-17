@@ -14,6 +14,8 @@ public class SupabaseManager : MonoBehaviour
     [SerializeField] TMP_InputField PasswordField;
     [SerializeField] TextMeshProUGUI usernameText;
     [SerializeField] TextMeshProUGUI messageText;
+    [SerializeField] Canvas loginCanvas;
+    [SerializeField] Canvas menuCanvas;
 
     public void ValidateLogin()
     {
@@ -49,8 +51,8 @@ public class SupabaseManager : MonoBehaviour
             {
                 User user = users[0];
                 Debug.Log($"User: {user.username}, Description: {user.description}");
-                messageText.text = $"Welcome!";
-                messageText.color = Color.green;
+                loginCanvas.gameObject.SetActive(false);
+                menuCanvas.gameObject.SetActive(true);
                 usernameText.text = user.username;
                 usernameText.color = Color.blue;
             }
