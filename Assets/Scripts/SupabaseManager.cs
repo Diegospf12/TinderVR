@@ -16,12 +16,12 @@ public class SupabaseManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI messageText;
     [SerializeField] Canvas loginCanvas;
     [SerializeField] Canvas menuCanvas;
+    [SerializeField] Image profileImage;
 
     public void ValidateLogin()
     {
         string username = UsernameField.text;
         string password = PasswordField.text;
-
         StartCoroutine(Login(username, password));
     }
 
@@ -50,15 +50,17 @@ public class SupabaseManager : MonoBehaviour
             if (users.Length > 0)
             {
                 User user = users[0];
-                Debug.Log($"User: {user.username}, Description: {user.description}");
+                UnityWebRequest photosRequest = UnityWebRequestTexture.GetTexture(user.profilephoto);
+                yield return photosRequest.SendWebRequest();
                 loginCanvas.gameObject.SetActive(false);
                 menuCanvas.gameObject.SetActive(true);
                 usernameText.text = user.username;
                 usernameText.color = Color.blue;
+                Texture2D texture = ((DownloadHandlerTexture)photosRequest.downloadHandler).texture;
+                profileImage.sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
             }
             else
             {
-                Debug.Log("Invalid username or password.");
                 messageText.text = "Usuario o contraseña inválidos";
                 messageText.color = Color.red;
             }
