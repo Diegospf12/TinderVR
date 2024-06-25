@@ -55,7 +55,7 @@ public class SupabaseManager : MonoBehaviour
                 loginCanvas.gameObject.SetActive(false);
                 menuCanvas.gameObject.SetActive(true);
                 usernameText.text = user.username;
-                usernameText.color = Color.blue;
+                usernameText.color = Color.white;
                 Texture2D texture = ((DownloadHandlerTexture)photosRequest.downloadHandler).texture;
                 profileImage.sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
             }
