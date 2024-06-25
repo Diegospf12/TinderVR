@@ -10,8 +10,8 @@ public class SupabaseManager : MonoBehaviour
     private const string SUPABASE_URL = "https://maswuwwgqsiadeecdytp.supabase.co";
     private const string SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1hc3d1d3dncXNpYWRlZWNkeXRwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTg1Njk4MzYsImV4cCI6MjAzNDE0NTgzNn0.vIGnyUOJarJFZ-s4gPCdlbEdqWiGjx_hVWx53vGnd5s";
 
-    [SerializeField] TMP_InputField UsernameField;
-    [SerializeField] TMP_InputField PasswordField;
+    [SerializeField] InputField UsernameField;
+    [SerializeField] InputField PasswordField;
     [SerializeField] TextMeshProUGUI usernameText;
     [SerializeField] TextMeshProUGUI messageText;
     [SerializeField] Canvas loginCanvas;
