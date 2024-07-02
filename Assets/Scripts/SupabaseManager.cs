@@ -4,6 +4,7 @@ using UnityEngine.Networking;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class SupabaseManager : MonoBehaviour
 {
@@ -58,6 +59,10 @@ public class SupabaseManager : MonoBehaviour
                 usernameText.color = Color.white;
                 Texture2D texture = ((DownloadHandlerTexture)photosRequest.downloadHandler).texture;
                 profileImage.sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+                StaticData.usernameText = user.username.ToString();
+                StaticData.DescriptionText = user.description.ToString();
+                StaticData.profilePhoto = texture;
+                SceneManager.LoadScene(sceneName: "Scenes/Lobby");
             }
             else
             {
