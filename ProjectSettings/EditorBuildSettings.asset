@@ -8,12 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GUI.unity
     guid: 39ddc9a528ee04c87bf0acb1dee96301
-  - enabled: 0
-    path: Assets/Samples/Meta XR Core SDK/65.0.0/Sample Scenes/VirtualKeyboard.unity
-    guid: c9684441ee1da1244a223118fdaa5d13
   - enabled: 1
     path: Assets/Scenes/Lobby.unity
     guid: 36f9e136194ebbf40898169f70910980
+  - enabled: 1
+    path: Assets/Scenes/PicnicEnviroment.unity
+    guid: 6144b895d72544470a6b8c23ee0d7245
+  - enabled: 1
+    path: Assets/Scenes/CampingEnviroment.unity
+    guid: 244da8f1fe0705947878695b126214fe
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: fe4181413cb834513adc6e1ecfcac660, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: b3ea4f6d3b27f44468fe9188ffae9e23, type: 2}
