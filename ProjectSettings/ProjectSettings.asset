@@ -942,11 +942,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: abde6018-02a8-431d-b1c9-a6a6c49402b7
+  cloudProjectId: c1e8ef9b-2c64-4946-89be-a662f9cf0c4d
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: TinderVR
-  organizationId: diegopacheco11
+  projectName: Tinder 2024-06-28_10-53-19
+  organizationId: juanpedrovv_utec
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
