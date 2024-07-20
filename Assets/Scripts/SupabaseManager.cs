@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System.Text;
 
 public class SupabaseManager : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class SupabaseManager : MonoBehaviour
     [SerializeField] Canvas loginCanvas;
     [SerializeField] Canvas menuCanvas;
     [SerializeField] Image profileImage;
+
 
     public void ValidateLogin()
     {
@@ -50,6 +52,18 @@ public class SupabaseManager : MonoBehaviour
 
             if (users.Length > 0)
             {
+                // Set online attr to TRUE
+                string jsonBody = @"{ ""online"": ""true""}";
+                byte[] bodyRaw = Encoding.UTF8.GetBytes(jsonBody);        
+                url = $"{SUPABASE_URL}/rest/v1/users?online=true";               
+                request = UnityWebRequest.Get(url);
+                request.SetRequestHeader("apikey", SUPABASE_KEY);
+                request.SetRequestHeader("Authorization", $"Bearer {SUPABASE_KEY}");
+                request.SetRequestHeader("Content-Type", "application/json");
+                request.SetRequestHeader("Prefer", "request=minimal");
+                request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+                yield return request.SendWebRequest();
+
                 User user = users[0];
                 UnityWebRequest photosRequest = UnityWebRequestTexture.GetTexture(user.profilephoto);
                 yield return photosRequest.SendWebRequest();
